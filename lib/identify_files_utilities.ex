@@ -33,7 +33,7 @@ defmodule IdentifyFiles.Utilities do
     files ++ Enum.map(dirs, &get_files(&1))
   end
 
-  def get_files2([], files), do: List.flatten(files)
+  def get_files2([], acc_files), do: List.flatten(acc_files)
 
   def get_files2([dir | remaining_dirs], acc_files) do
 
